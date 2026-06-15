@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: bronze_region
+    description: "Raw region data from TPCH_SF1 with renamed columns"
+    columns:
+      - name: region_key
+        description: "Primary key for region"
+        tests:
+          - unique
+          - not_null
+      - name: region_name
+        description: "Name of the region"
+      - name: comment
+        description: "Additional comments"

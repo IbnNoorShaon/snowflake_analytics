@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: bronze_nation
+    description: "Raw nation data from TPCH_SF1 with renamed columns"
+    columns:
+      - name: nation_key
+        description: "Primary key for nation"
+        tests:
+          - unique
+          - not_null
+      - name: nation_name
+        description: "Name of the nation"
+      - name: region_key
+        description: "Foreign key to region"
+        tests:
+          - not_null
+      - name: comment
+        description: "Additional comments"

@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: bronze_orders
+    description: "Raw orders data from TPCH_SF1 with renamed columns"
+    columns:
+      - name: order_key
+        description: "Primary key for order"
+        tests:
+          - unique
+          - not_null
+      - name: customer_key
+        description: "Foreign key to customer"
+        tests:
+          - not_null
+      - name: order_status
+        description: "Status of the order"
+      - name: total_price
+        description: "Total price of the order"
+      - name: order_date
+        description: "Date the order was placed"
+      - name: order_priority
+        description: "Priority level of the order"
+      - name: clerk
+        description: "Clerk who handled the order"
+      - name: ship_priority
+        description: "Shipping priority"
+      - name: comment
+        description: "Additional comments"

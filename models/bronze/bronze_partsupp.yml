@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: bronze_partsupp
+    description: "Raw part supplier data from TPCH_SF1 with renamed columns"
+    columns:
+      - name: part_key
+        description: "Foreign key to part"
+        tests:
+          - not_null
+      - name: supplier_key
+        description: "Foreign key to supplier"
+        tests:
+          - not_null
+      - name: available_qty
+        description: "Available quantity in stock"
+      - name: supply_cost
+        description: "Cost to supply the part"
+      - name: comment
+        description: "Additional comments"

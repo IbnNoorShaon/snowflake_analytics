@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: bronze_lineitem
+    description: "Raw line item data from TPCH_SF1 with renamed columns"
+    columns:
+      - name: order_key
+        description: "Foreign key to order"
+        tests:
+          - not_null
+      - name: part_key
+        description: "Foreign key to part"
+      - name: supplier_key
+        description: "Foreign key to supplier"
+      - name: line_number
+        description: "Line number within the order"
+      - name: quantity
+        description: "Quantity ordered"
+      - name: extended_price
+        description: "Extended price of the line item"
+      - name: discount
+        description: "Discount applied"
+      - name: tax
+        description: "Tax applied"
+      - name: return_flag
+        description: "Return flag indicator"
+      - name: line_status
+        description: "Status of the line item"
+      - name: ship_date
+        description: "Date item was shipped"
+      - name: commit_date
+        description: "Committed delivery date"
+      - name: receipt_date
+        description: "Date item was received"
+      - name: ship_instruct
+        description: "Shipping instructions"
+      - name: ship_mode
+        description: "Mode of shipping"
+      - name: comment
+        description: "Additional comments"

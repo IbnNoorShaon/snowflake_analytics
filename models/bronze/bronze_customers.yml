@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: bronze_customers
+    description: "Raw customer data from TPCH_SF1 with renamed columns"
+    columns:
+      - name: customer_key
+        description: "Primary key for customer"
+        tests:
+          - unique
+          - not_null
+      - name: customer_name
+        description: "Name of the customer"
+      - name: address
+        description: "Customer address"
+      - name: nation_key
+        description: "Foreign key to nation"
+      - name: phone
+        description: "Customer phone number"
+      - name: account_balance
+        description: "Customer account balance"
+      - name: market_segment
+        description: "Market segment the customer belongs to"
+      - name: comment
+        description: "Additional comments"
