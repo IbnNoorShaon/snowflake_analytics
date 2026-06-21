@@ -1,4 +1,4 @@
-# TPC-H Analytics Dashboard
+#  Global Supply Chain Intelligence Dashboar
 
 End-to-end data engineering portfolio project built on Snowflake, dbt, and Streamlit.
 
