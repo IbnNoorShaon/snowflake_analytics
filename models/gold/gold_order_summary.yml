@@ -1,0 +1,16 @@
+models:
+  - name: gold_order_summary
+    description: Order metrics by date, market segment and region
+    columns:
+      - name: order_date
+        tests:
+          - not_null
+      - name: market_segment
+        tests:
+          - not_null
+      - name: total_orders
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
